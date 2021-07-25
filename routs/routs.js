@@ -1,11 +1,7 @@
 const { Router } = require('express');
-const multer = require('multer');
 const router = Router();
-const upload = multer({ dest: '/uploads' }).single('file');
 const Autopart = require('../modules/autopart');
-const Cotegory = require('../modules/cotegory');
 const autopartController = require('../Controllers/autopart.controller');
-const sharp = require('sharp');
 const resize = require('../helpers/resize');
 
 // router.get('/', (req, res) => {
