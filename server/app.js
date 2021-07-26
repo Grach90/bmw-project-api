@@ -7,7 +7,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const url = process.env.MONGO_API;
+const url = process.env.MONGO_API ||
+    'mongodb+srv://Hrach:wsG99AIrn84wUalu@cluster0.1fvmi.mongodb.net/bmw-project?retryWrites=true&w=majority';
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const dbConnection = mongoose.connection;
